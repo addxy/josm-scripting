@@ -49,7 +49,7 @@ async function crawl(project) {
 
   for (var task of tasks['features']) {
     let features = await getFeatures(task)
-    //features = turf.tag(features, postal, 'CFSAUID', 'addr:postcode')
+    features = turf.tag(features, postal, 'CFSAUID', 'addr:postcode')
     console.log(features['features'][0])
     exit()
   }
